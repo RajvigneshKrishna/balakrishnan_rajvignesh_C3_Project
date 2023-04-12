@@ -63,5 +63,11 @@ class RestaurantTest {
 	}
 	// <<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-
+	// <<<<<<<<<<<<<<<<<<<<<<<ITEM>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	@Test
+	public void get_total_cost_of_items_added() {
+		List<Item> addedItems = Arrays.asList(new Item("Sweet corn soup", 119),new Item("Vegetable lasagne", 269));
+		int totalCost = restaurant.getTotalCostOfItemAdded(addedItems);
+		assertEquals(totalCost, 388);
+	}
 }
