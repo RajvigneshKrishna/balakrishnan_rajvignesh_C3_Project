@@ -29,7 +29,7 @@ class RestaurantTest {
 	// >>>>>>>>>>>>>>>>>>>>>>>>>OPEN/CLOSED<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 	@Test
 	public void is_restaurant_open_should_return_true_if_time_is_between_opening_and_closing_time() {
-
+		assertTrue(restaurant.isRestaurantOpen());
 	}
 
 	@Test
@@ -62,5 +62,6 @@ class RestaurantTest {
 		assertThrows(itemNotFoundException.class, () -> restaurant.removeFromMenu("French fries"));
 	}
 	// <<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 
 }

@@ -34,7 +34,9 @@ class RestaurantServiceTest {
 	// 3: Testing and Version control: Optional content
 	@Test
 	public void searching_for_non_existing_restaurant_should_throw_exception() throws restaurantNotFoundException {
-		
+		assertThrows(restaurantNotFoundException.class, () -> {
+			service.findRestaurantByName("Coffee Tea Cafe");
+		});
 	}
 	// <<<<<<<<<<<<<<<<<<<<SEARCHING>>>>>>>>>>>>>>>>>>>>>>>>>>
 
